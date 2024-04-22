@@ -1,0 +1,215 @@
+:root {
+  --Strong-cyan: hsl(172, 67%, 45%);
+  --Faded-cyan: rgb(133, 248, 233);
+  --Very-dark-cyan: hsl(183, 100%, 15%);
+  --Dark-grayish-cyan: hsl(186, 14%, 43%);
+  --Grayish-cyan: hsl(184, 14%, 56%);
+  --Light-grayish-cyan: hsl(185, 41%, 84%);
+  --Very-light-grayish-cyan: hsl(189, 41%, 97%);
+  --White: hsl(0, 0%, 100%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+body {
+  background: var(--Faded-cyan);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: bold;
+  height: 100vh;
+}
+
+h1 {
+  text-align: center;
+  margin: 40px 0;
+}
+
+h4 {
+  color: var(--Very-dark-cyan);
+}
+
+.container {
+  background: var(--White);
+  width: 100%;
+  padding: 25px;
+  border-radius: 16px;
+}
+
+.bill-section {
+  padding: 0 10px;
+}
+
+label {
+  color: var(--Very-dark-cyan);
+}
+
+input {
+  background: var(--Light-grayish-cyan);
+  color: var(--Very-dark-cyan);
+  text-align: right;
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 4px;
+  border: 2px solid var(--Light-grayish-cyan);
+  cursor: pointer;
+}
+
+input:focus {
+  outline: none;
+}
+
+.bill-container input {
+  width: 100%;
+}
+
+.bill-container div,
+.people-input-container .input-div {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background: var(--Light-grayish-cyan);
+  color: var(--Grayish-cyan);
+  margin: 5px 0 25px;
+  padding: 0 10px;
+  border-radius: 4px;
+  border: 2px solid var(--Light-grayish-cyan);
+  cursor: pointer;
+}
+
+.bill-container div:hover,
+.people-input-container .input-div:hover {
+  border: 2px solid var(--Strong-cyan);
+}
+
+.parent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.parent button {
+  background: var(--Very-dark-cyan);
+  color: var(--White);
+  text-align: center;
+  padding: 10px;
+  width: 30%;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.parent button:hover {
+  background: var(--Faded-cyan);
+  color: var(--Very-dark-cyan);
+}
+
+#custom {
+  width: 30%;
+  margin-bottom: 20px;
+  padding: 8px 10px;
+}
+#custom:focus {
+  border: 2px solid var(--Strong-cyan);
+}
+
+.people-input-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.people-input-container input {
+  width: 100%;
+}
+
+.people-input-container div {
+  display: flex;
+  justify-content: space-between;
+  color: firebrick;
+}
+
+.calc-section {
+  background: var(--Very-dark-cyan);
+  width: 100%;
+  padding: 30px 15px 10px;
+  border-radius: 10px;
+}
+
+.calc-section div {
+  margin: 30px 0;
+}
+
+.calc-section p {
+  color: var(--White);
+}
+
+.calc-section small {
+  color: var(--Dark-grayish-cyan);
+}
+
+.calc-section .tip {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.calc-section .total-amount {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.calc-section .amount {
+  color: var(--Strong-cyan);
+  font-size: 20px;
+}
+
+.calc-section .reset-btn {
+  background: var(--Strong-cyan);
+  color: var(--Very-dark-cyan);
+  font-size: 16px;
+  text-transform: uppercase;
+  width: 100%;
+  margin: 20px 0 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+}
+
+.calc-section .reset-btn:hover {
+  background: var(--Faded-cyan);
+}
+
+.attribution {
+  text-align: center;
+  margin-top: 10px;
+}
+
+@media (min-width: 799px) {
+  .container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .bill-section {
+    width: 50%;
+  }
+
+  .calc-section {
+    width: 45%;
+  }
+
+  .calc-section .reset-btn {
+    margin-top: 50px;
+  }
+}
